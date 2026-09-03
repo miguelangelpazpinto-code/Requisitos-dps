@@ -74,15 +74,27 @@ footer{max-width:760px;margin:auto;padding:0 22px 35px;color:#657087;font-size:1
 
 
 /* Navegación principal por pestañas */
-.main-tabs-wrap{max-width:760px;margin:-24px auto 0;padding:0 18px;position:relative;z-index:5}
-.main-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#fff;padding:10px;border-radius:16px;box-shadow:0 8px 25px rgba(15,31,55,.12);border:1px solid #dbe3ec}
+.main-tabs-wrap{max-width:980px;margin:-24px auto 0;padding:0 18px;position:relative;z-index:5}
+.main-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;background:#fff;padding:10px;border-radius:16px;box-shadow:0 8px 25px rgba(15,31,55,.12);border:1px solid #dbe3ec}
 .main-tab{border:1px solid #d5deea;background:#f4f7fb;color:#25344d;border-radius:12px;padding:14px 12px;font-weight:800;font-size:15px;cursor:pointer}
 .main-tab.activa{background:#172033;color:#fff;border-color:#172033}
 .pagina-tab{display:none}
 .pagina-tab.activa{display:block}
 #pagina-certificados{padding-top:4px}
 #pagina-certificados .certificados-box{margin-top:0}
-@media(max-width:550px){.main-tabs-wrap{padding:0 12px}.main-tab{font-size:14px;padding:13px 8px}}
+@media(max-width:550px){.main-tabs-wrap{padding:0 12px}.main-tabs{grid-template-columns:1fr}.main-tab{font-size:14px;padding:13px 8px}}
+
+/* Requisitos mínimos */
+.requisitos-intro{margin-bottom:18px}
+.requisitos-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.requisito-card{border:1px solid #dbe3ec;border-radius:16px;padding:20px;background:#fff;box-shadow:0 6px 18px rgba(15,31,55,.06)}
+.requisito-card h3{margin:0 0 12px;color:#172033;font-size:20px}
+.requisito-card ul{margin:12px 0 0;padding-left:22px}
+.requisito-card li{margin:10px 0;line-height:1.45}
+.requisito-card .pregunta{margin-top:18px;padding:14px;border-radius:12px;background:#eef3f9;font-weight:800;color:#172033;text-align:center}
+.requisito-card .aclaracion{margin-top:14px;padding:13px 14px;border-left:4px solid #d6a514;background:#fff8df;border-radius:8px;line-height:1.5}
+.requisito-card .subtexto{color:#526176;line-height:1.55}
+@media(max-width:700px){.requisitos-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -100,6 +112,7 @@ footer{max-width:760px;margin:auto;padding:0 22px 35px;color:#657087;font-size:1
   <div class="main-tabs" role="tablist" aria-label="Secciones de la guía">
     <button type="button" class="main-tab activa" id="main-tab-documentos" role="tab" aria-selected="true" aria-controls="pagina-documentos" onclick="mostrarPagina('documentos')">📋 Documentos y ejemplos</button>
     <button type="button" class="main-tab" id="main-tab-certificados" role="tab" aria-selected="false" aria-controls="pagina-certificados" onclick="mostrarPagina('certificados')">📄 Certificados</button>
+    <button type="button" class="main-tab" id="main-tab-requisitos" role="tab" aria-selected="false" aria-controls="pagina-requisitos" onclick="mostrarPagina('requisitos')">🪪 Requisitos mínimos</button>
   </div>
 </div>
 
@@ -217,6 +230,41 @@ Esta lista te ayuda a identificar posibles comprobantes de residencia. Tener dos
 </section>
 </section>
 
+<section id="pagina-requisitos" class="pagina-tab" role="tabpanel" aria-labelledby="main-tab-requisitos">
+  <div class="requisitos-intro">
+    <h2>🪪 Requisitos mínimos para gestionar tu licencia</h2>
+    <p>Revisa cuál de estas situaciones corresponde a tu caso antes de comenzar la gestión.</p>
+  </div>
+
+  <div class="requisitos-grid">
+    <article class="requisito-card">
+      <h3>🏠 Resido en Texas</h3>
+      <p class="subtexto">Si ya resides en Texas y vas a gestionar tu licencia por primera vez, prepara:</p>
+      <ul>
+        <li><strong>Social (físico)</strong></li>
+        <li><strong>Documento de estatus legal (físico)</strong>: puede ser permiso de trabajo, residencia permanente o documento de ciudadanía.</li>
+        <li><strong>2 comprobantes de residencia</strong> a tu nombre y con tu dirección residencial actual de Texas.</li>
+      </ul>
+      <div class="pregunta">✅ ¿Tienes todos los requisitos?</div>
+    </article>
+
+    <article class="requisito-card">
+      <h3>📍 No resido en Texas</h3>
+      <p class="subtexto">Si no resides en Texas, para gestionar tu licencia vas a necesitar:</p>
+      <ul>
+        <li><strong>Social (físico)</strong></li>
+        <li><strong>Documento de estatus legal (físico)</strong>: puede ser permiso de trabajo, residencia permanente o documento de ciudadanía.</li>
+        <li>Una <strong>dirección en Texas</strong>. Puede ser la dirección de cualquier amigo o familiar; lo importante es que la dirección esté en Texas.</li>
+      </ul>
+      <div class="pregunta">✅ ¿Tienes los documentos necesarios para revisar tu caso?</div>
+    </article>
+  </div>
+
+  <div class="nota" style="margin-top:18px">
+    <strong>⚠️ Recuerda:</strong> Esta información sirve como guía inicial. Texas DPS determina finalmente qué documentos son aceptables y puede solicitar documentación adicional según tu situación.
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -266,7 +314,7 @@ const ejemplos={impact:[{title:'Certificado de Impact Texas Adult Drivers (ITAD)
 
 
 function mostrarPagina(pagina){
- const paginas=["documentos","certificados"];
+ const paginas=["documentos","certificados","requisitos"];
  paginas.forEach(function(p){
    const tab=document.getElementById("main-tab-"+p);
    const panel=document.getElementById("pagina-"+p);
