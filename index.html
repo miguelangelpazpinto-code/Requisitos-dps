@@ -1,88 +1,725 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Requisitos DPS Texas | Prueba de Residencia</title>
-<meta name="description" content="Lista interactiva de posibles documentos de prueba de residencia para trámites de licencia o identificación en Texas.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Requisitos DPS Texas</title>
 
 <style>
-:root{
---bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#657087;
---brand:#155eef;--brand2:#0b47b7;--border:#dce3ee;
---shadow:0 12px 30px rgba(25,45,85,.10)
+* {
+    box-sizing: border-box;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
-.hero{background:linear-gradient(135deg,#0b47b7,#2375ff);color:white;padding:34px 18px 48px}
-.wrap{max-width:760px;margin:auto}
-.hero h1{font-size:clamp(28px,6vw,42px);margin:0 0 10px;line-height:1.08}
-.hero p{margin:0;opacity:.94;font-size:17px}
-.card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin:-20px 14px 18px}
-.notice{background:#eef5ff;border:1px solid #cfe0ff;border-radius:14px;padding:15px;margin-bottom:18px;line-height:1.45}
-.notice strong{color:var(--brand2)}
-h2{font-size:22px;margin:8px 0 5px}
-.sub{color:var(--muted);margin:0 0 16px;line-height:1.45}
-.options{display:grid;gap:11px}
-.option{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--border);border-radius:14px;padding:14px;background:#fff}
-.icon{width:48px;height:48px;border-radius:12px;background:#eef5ff;display:grid;place-items:center;flex:0 0 48px;font-size:27px}
-.option-content{min-width:0;flex:1}
-.option:has(input:checked){border-color:var(--brand);background:#f2f6ff}
-.option input{width:21px;height:21px;margin-top:2px;accent-color:var(--brand)}
-.option b{display:block;font-size:16px}
-.option small{display:block;color:var(--muted);line-height:1.35;margin-top:3px}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-button{border:0;border-radius:12px;padding:14px 16px;font-weight:700;font-size:15px;cursor:pointer}
-.primary{background:var(--brand);color:#fff}
-.secondary{background:#edf2f8;color:var(--text)}
-.result{display:none;margin-top:18px;border-radius:14px;padding:16px;line-height:1.5}
-.result.ok{display:block;background:#eaf8f2;border:1px solid #b8ead8;color:#075b40}
-.result.warn{display:block;background:#fff7e8;border:1px solid #f1d4a2;color:#7c4700}
-.footer{max-width:760px;margin:auto;padding:0 20px 35px;color:var(--muted);font-size:13px;line-height:1.5}
-.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:99px;font-size:13px;margin-bottom:12px}
-@media(max-width:560px){.actions{grid-template-columns:1fr}.card{padding:17px}}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+header {
+    background: linear-gradient(135deg,#0b47b7,#2375ff);
+    color: white;
+    padding: 35px 20px 50px;
+}
+
+.contenedor {
+    max-width: 760px;
+    margin: auto;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    line-height: 1.1;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.30);
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.tarjeta {
+    max-width: 760px;
+    margin: -25px auto 25px;
+    background: white;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+.aviso {
+    background: #eef5ff;
+    border: 1px solid #c9dcff;
+    padding: 16px;
+    border-radius: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.aviso strong {
+    color: #0b47b7;
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.instruccion {
+    color: #657087;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.opciones {
+    display: grid;
+    gap: 12px;
+}
+
+.opcion {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 15px;
+    border: 1px solid #dce3ee;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+.opcion:hover {
+    border-color: #155eef;
+}
+
+.opcion:has(input:checked) {
+    border: 2px solid #155eef;
+    background: #f1f6ff;
+}
+
+.opcion input {
+    width: 22px;
+    height: 22px;
+    margin-top: 12px;
+    accent-color: #155eef;
+    flex-shrink: 0;
+}
+
+.icono {
+    width: 52px;
+    height: 52px;
+    background: #eaf2ff;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    flex-shrink: 0;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.texto span {
+    display: block;
+    color: #657087;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 13px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resultado-btn {
+    background: #155eef;
+    color: white;
+}
+
+.compartir-btn {
+    background: #e9eef6;
+    color: #172033;
+}
+
+#resultado {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 14px;
+    line-height: 1.5;
+}
+
+.correcto {
+    display: block !important;
+    background: #e8f8f1;
+    border: 1px solid #aee4cf;
+    color: #075b40;
+}
+
+.faltan {
+    display: block !important;
+    background: #fff6e6;
+    border: 1px solid #f0d09b;
+    color: #754300;
+}
+
+.seleccionados {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.nota {
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 14px;
+    background: #f7f8fa;
+    color: #596579;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer {
+    max-width: 760px;
+    margin: auto;
+    padding: 0 22px 35px;
+    color: #657087;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media(max-width: 800px) {
+    .tarjeta {
+        margin: -25px 14px 20px;
+    }
+
+    header h1 {
+        font-size: 31px;
+    }
+}
+
+@media(max-width: 550px) {
+    .botones {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        padding: 17px;
+    }
+
+    .opcion {
+        padding: 13px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-<div class="wrap">
-<div class="badge">Texas • Licencia / ID</div>
+<header>
+<div class="contenedor">
+
+<div class="etiqueta">
+Texas • Licencia de conducir / ID
+</div>
+
 <h1>Prueba de residencia para el DPS</h1>
-<p>Marca los documentos que tienes y revisa si ya cuentas con al menos dos posibles comprobantes.</p>
-</div>
-</section>
 
-<main class="card wrap">
+<p>
+Marca los documentos que tienes para revisar si cuentas con
+al menos dos posibles comprobantes de residencia.
+</p>
 
-<div class="notice">
-<strong>Importante:</strong> debes presentar <strong>2 documentos</strong> con tu nombre y la misma dirección residencial de Texas. En general deben provenir de compañías o agencias diferentes, y al menos uno debe demostrar 30 días de residencia en Texas, salvo excepciones indicadas por el DPS.
 </div>
+</header>
+
+
+<main class="tarjeta">
+
+<div class="aviso">
+
+<strong>📌 IMPORTANTE</strong><br><br>
+
+Para realizar tu trámite, normalmente debes presentar
+<strong>2 documentos de prueba de residencia</strong>.
+
+<br><br>
+
+Los documentos deben mostrar tu <strong>nombre</strong> y la
+<strong>misma dirección residencial de Texas</strong>.
+
+<br><br>
+
+Generalmente deben provenir de
+<strong>compañías o agencias diferentes</strong>.
+
+<br><br>
+
+Al menos uno de los documentos debe cumplir con el requisito
+de demostrar residencia en Texas durante el período requerido
+por el DPS, salvo las excepciones aplicables.
+
+</div>
+
 
 <h2>¿Cuáles de estos tienes?</h2>
-<p class="sub">Selecciona todos los documentos que tengas disponibles. La aceptación final corresponde al Texas DPS.</p>
 
-<div class="options">
+<p class="instruccion">
+Marca todos los documentos que tengas disponibles.
+Después presiona <strong>“Ver mi resultado”</strong>.
+</p>
 
-<label class="option">
-<input type="checkbox" value="Estado de cuenta bancario o tarjeta de crédito">
-<span class="icon">🏦</span>
-<span class="option-content">
-<b>Estado de cuenta bancario / tarjeta de crédito</b>
-<small>Documento emitido por una institución financiera con tu nombre y dirección de Texas.</small>
+
+<div class="opciones">
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Estado de cuenta bancario / tarjeta de crédito">
+
+<div class="icono">🏦</div>
+
+<div class="texto">
+
+<strong>
+Estado de cuenta bancario / tarjeta de crédito
+</strong>
+
+<span>
+Estado de cuenta o documento emitido por una institución
+financiera que muestre tu nombre y dirección residencial
+de Texas.
 </span>
+
+</div>
+
 </label>
 
-<label class="option">
-<input type="checkbox" value="Seguro del carro">
-<span class="icon">🚗</span>
-<span class="option-content">
-<b>Seguro del carro</b>
-<small>Póliza, estado de cuenta o tarjeta vigente del seguro del vehículo.</small>
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Seguro del carro">
+
+<div class="icono">🚗</div>
+
+<div class="texto">
+
+<strong>
+Seguro del carro
+</strong>
+
+<span>
+Póliza, estado de cuenta o tarjeta vigente del seguro
+del vehículo que contenga la información requerida.
 </span>
+
+</div>
+
 </label>
 
-<label class="option">
-<input type="checkbox" value="Seguro de casa o apartamento">
-<span class="icon">🏠</
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Seguro de casa / apartamento">
+
+<div class="icono">🏠</div>
+
+<div class="texto">
+
+<strong>
+Seguro de casa / apartamento
+</strong>
+
+<span>
+Póliza o estado de cuenta vigente del seguro de propietario
+o inquilino.
+</span>
+
+</div>
+
+</label>
+
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Factura de electricidad, agua, gas, internet o cable">
+
+<div class="icono">💡</div>
+
+<div class="texto">
+
+<strong>
+Factura de servicios
+</strong>
+
+<span>
+Factura de <strong>electricidad, agua, gas, internet o cable</strong>
+que muestre tu nombre y dirección residencial.
+</span>
+
+</div>
+
+</label>
+
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Talón de pago / W-2 / 1099">
+
+<div class="icono">💵</div>
+
+<div class="texto">
+
+<strong>
+Talón de pago / W-2 / 1099
+</strong>
+
+<span>
+Talón de pago o documento fiscal que muestre la información
+requerida y cumpla con las condiciones de fecha establecidas
+por el DPS.
+</span>
+
+</div>
+
+</label>
+
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Contrato de arrendamiento">
+
+<div class="icono">📝</div>
+
+<div class="texto">
+
+<strong>
+Contrato de arrendamiento
+</strong>
+
+<span>
+Contrato residencial vigente.
+<strong>Recomendamos llevarlo completo y firmado.</strong>
+</span>
+
+</div>
+
+</label>
+
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Carta / documento de USCIS">
+
+<div class="icono">🇺🇸</div>
+
+<div class="texto">
+
+<strong>
+Carta / documento de USCIS
+</strong>
+
+<span>
+Ejemplo: notificación o carta de aprobación relacionada
+con <strong>permiso de trabajo o residencia</strong>.
+Debe contener la información necesaria para que pueda
+utilizarse como comprobante.
+</span>
+
+</div>
+
+</label>
+
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Registro o título del carro">
+
+<div class="icono">🚙</div>
+
+<div class="texto">
+
+<strong>
+Registro o título del carro
+</strong>
+
+<span>
+Registro o título válido y vigente de un vehículo de Texas
+que cumpla con los requisitos correspondientes.
+</span>
+
+</div>
+
+</label>
+
+
+
+<label class="opcion">
+
+<input type="checkbox"
+value="Préstamo / crédito">
+
+<div class="icono">💳</div>
+
+<div class="texto">
+
+<strong>
+Préstamo / crédito
+</strong>
+
+<span>
+Por ejemplo, un estado de cuenta o comprobante de pago
+del automóvil que contenga tu nombre y dirección y cumpla
+con los requisitos del DPS.
+</span>
+
+</div>
+
+</label>
+
+
+</div>
+
+
+<div class="botones">
+
+<button
+class="resultado-btn"
+onclick="verResultado()">
+
+✓ Ver mi resultado
+
+</button>
+
+
+<button
+class="compartir-btn"
+onclick="compartir()">
+
+📤 Compartir mi selección
+
+</button>
+
+</div>
+
+
+<div id="resultado"></div>
+
+
+<div class="nota">
+
+<strong>⚠️ Recuerda:</strong>
+
+Esta lista te ayuda a identificar posibles comprobantes
+de residencia. Tener dos documentos seleccionados
+<strong>no garantiza automáticamente su aceptación</strong>.
+
+Revisa que los documentos estén vigentes, correspondan
+a tu situación y contengan la información requerida.
+
+</div>
+
+</main>
+
+
+<footer>
+
+<strong>Aviso:</strong>
+Esta página es únicamente una guía informativa.
+El Texas Department of Public Safety (DPS) tiene la autoridad
+final para determinar si un documento es aceptable y puede
+solicitar documentación adicional.
+
+</footer>
+
+
+<script>
+
+function documentosSeleccionados() {
+
+    return Array.from(
+        document.querySelectorAll(
+            'input[type="checkbox"]:checked'
+        )
+    ).map(function(elemento) {
+        return elemento.value;
+    });
+
+}
+
+
+function verResultado() {
+
+    const documentos = documentosSeleccionados();
+
+    const resultado =
+        document.getElementById("resultado");
+
+    if (documentos.length >= 2) {
+
+        resultado.className = "correcto";
+
+        resultado.innerHTML =
+        "<strong>✅ Tienes " +
+        documentos.length +
+        " posibles comprobantes.</strong>" +
+
+        "<br><br>" +
+
+        "Ahora revisa que al menos dos tengan tu nombre, " +
+        "la misma dirección residencial de Texas y cumplan " +
+        "con los requisitos correspondientes del DPS." +
+
+        "<br><br>" +
+
+        "<strong>Documentos seleccionados:</strong>" +
+
+        "<ul class='seleccionados'>" +
+
+        documentos.map(function(doc) {
+            return "<li>" + doc + "</li>";
+        }).join("") +
+
+        "</ul>";
+
+    } else {
+
+        const faltan = 2 - documentos.length;
+
+        resultado.className = "faltan";
+
+        resultado.innerHTML =
+        "<strong>⚠️ Todavía te faltan " +
+        faltan +
+        " posible" +
+        (faltan > 1 ? "s" : "") +
+        " comprobante" +
+        (faltan > 1 ? "s" : "") +
+        ".</strong>" +
+
+        "<br><br>" +
+
+        "Selecciona al menos dos documentos que tengas disponibles.";
+
+    }
+
+}
+
+
+async function compartir() {
+
+    const documentos =
+        documentosSeleccionados();
+
+    if (documentos.length === 0) {
+
+        alert(
+            "Primero selecciona los documentos que tienes."
+        );
+
+        return;
+
+    }
+
+    const mensaje =
+        "DOCUMENTOS QUE TENGO PARA EL DPS DE TEXAS:\n\n" +
+
+        documentos.map(function(doc) {
+            return "✓ " + doc;
+        }).join("\n") +
+
+        "\n\nPágina de requisitos:\n" +
+        window.location.href;
+
+
+    if (navigator.share) {
+
+        try {
+
+            await navigator.share({
+
+                title:
+                "Mis documentos para el DPS",
+
+                text:
+                mensaje
+
+            });
+
+            return;
+
+        } catch (error) {
+
+        }
+
+    }
+
+
+    try {
+
+        await navigator.clipboard.writeText(
+            mensaje
+        );
+
+        alert(
+            "Tu selección fue copiada. Ahora puedes pegarla en WhatsApp."
+        );
+
+    } catch (error) {
+
+        alert(mensaje);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
